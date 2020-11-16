@@ -38,16 +38,6 @@ int main()
     pid_t child_pid;
     int stat_loc;
 
-    /*  gets(input);
-      command = get_input(input);
-
-      {
-          printf("yes");
-          }
-      else
-          {
-              printf("no");
-          }*/
 
     while (1)
     {
