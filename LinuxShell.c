@@ -29,7 +29,9 @@ char **get_input(char *input)
     command[i] = NULL;
     return command;
 }
-
+int cd(char *path) {
+    return chdir(path);
+}
 
 int main()
 {
@@ -45,6 +47,13 @@ int main()
         printDir();
         gets(input);
         command = get_input(input);
+        if (strcmp(command[0], "cd") == 0)
+        {
+            if (cd(command[1]) < 0) {
+                printf("Execution error ");
+            }
+                continue;
+        }
         if (strcmp(command[0], "exit") == 0)
         {
             exit(0);
@@ -88,6 +97,8 @@ int main()
         }
 
     }
+
     return 0;
 }
+
 
